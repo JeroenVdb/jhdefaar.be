@@ -6,6 +6,8 @@
 	<title>{{ page.title }}</title>
 	<meta name="viewport" content="width=device-width">
 
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" href="/css/main-old-ie.css">
 	<![endif]-->
@@ -16,30 +18,34 @@
 </head>
 <body>
 
-	<div class="site">
-		<div class="header">
-			<h1 class="title"><a href="/">{{ site.name }}</a></h1>
-			<a class="extra" href="/">home</a>
+	<nav class="section red nav">
+		<div class="container">
+			<ul class="nav__list">
+				<li class="nav__list__item first"><a href="#" class="nav__anchor">info</a></li>
+				<li class="nav__list__item"><a href="#" class="nav__anchor">prijslijst</a></li>
+				<li class="nav__list__item"><a href="#" class="nav__anchor">feestjes</a></li>
+				<li class="nav__list__item"><a href="#" class="nav__anchor">agenda</a></li>
+				<li class="nav__list__item last logo"><a href="#" class="nav__anchor"><img src="img/128-facebook.png" height="84"></a></li>
+			</ul>
 		</div>
+	</nav>
 
-		{{ content }}
-
-		<div class="footer">
-			<div class="contact">
-				<p>
-					Your Name<br />
-					What You Are<br />
-					you@example.com
-				</p>
-			</div>
-			<div class="contact">
-				<p>
-					<a href="https://github.com/yourusername">github.com/yourusername</a><br />
-					<a href="https://twitter.com/yourusername">twitter.com/yourusername</a><br />
-				</p>
-			</div>
+	<header class="section header">
+		<div class="container">
+			<img src="img/logo-transparant.png" width="300">
 		</div>
-	</div>
+	</header>
+
+	{{ content }}
+
+	<section class="section footer">
+		<div class="container">
+			<footer>
+				Jeugdhuis de Faar
+			</footer>
+		</div>
+	</section>
+	
 
 	<script src="js/dist/main.min.js"></script>
 

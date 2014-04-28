@@ -1,3 +1,21 @@
-body {
-	background-color: red;
-}
+// Colors
+
+$primary-color: #000;
+$secondary-color: #fff;
+$tertiary-color: #a7161b;
+$quaternary-color: #5c5c56;
+
+$black: $primary-color;
+$white: $secondary-color;
+$red: $tertiary-color;
+$grey: $quaternary-color;
+
+// Breakpoints
+$bp0: 0;
+$bp1: 768px;
+$bp2: 984px;
+
+// Container width
+$bp0-container-width: 300px;
+$bp1-container-width: 768px;
+$bp2-container-width: 984px;

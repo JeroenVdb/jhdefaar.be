@@ -1,0 +1,32 @@
+.nav__list__item {
+	float:left;
+
+}
+
+.nav__anchor {
+	font-size: 3em;
+	font-weight: 300;
+	text-align: center;
+	display: block;
+	line-height: 1.75em;
+
+	text-decoration: none;
+
+	padding: 0 36px;
+
+	&:hover {
+		background-color: $black;
+	}
+}
+
+.logo {
+	float: right;
+	width: 84px;
+	
+
+	.nav__anchor {
+		font-size: 0;
+		padding: 0;
+	}
+}
+

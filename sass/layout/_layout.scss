@@ -1,0 +1,42 @@
+.container {
+	margin: 0 auto;
+	overflow: hidden;
+	max-width: $bp2-container-width;
+	padding: 0 20px 20px;
+
+	.nav & {
+		padding: 0;
+	}
+}
+
+.header {
+	.container {
+		text-align: center;
+		margin-top: -20px;
+  		margin-bottom: -50px;
+	}
+}
+
+.section {
+
+	&.nav {
+		padding-bottom: 0;
+	}
+
+	&.red {
+		background-color: $red;
+	}
+
+	&.grey {
+		background-color: $grey;
+	}
+
+	&.white {
+		background-color: $white;
+		color: $black;
+	}
+
+	&.black {
+		background-color: $black;
+	}
+}
