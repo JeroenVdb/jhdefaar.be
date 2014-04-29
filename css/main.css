@@ -29,7 +29,7 @@ h2 {
   font-size: 2em; }
 
 p {
-  margin: 20 0;
+  margin: 20px 0;
   line-height: 1.75em; }
 
 ul {
@@ -43,7 +43,7 @@ li {
   margin: 0 auto;
   overflow: hidden;
   max-width: 984px;
-  padding: 0 20px 20px; }
+  padding: 20px; }
   .nav .container {
     padding: 0; }
 
