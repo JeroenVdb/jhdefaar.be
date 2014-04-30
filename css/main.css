@@ -60,6 +60,144 @@ li {
   list-style-type: none;
 }
 
+/*
+Helper classes
+
+Use these classes at will.
+
+Styleguide 1.0
+*/
+/*
+Floats
+
+#### .pull-left
+
+Float an element left
+
+```hmtl
+<div class="pull-left">I float left</div>
+```
+
+#### .pull-right
+
+Float an element right
+
+```html
+<div class="pull-right">I float right</div>
+```
+
+Styleguide 1.1
+*/
+/* line 33, ../sass/base/_helpers.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 38, ../sass/base/_helpers.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 43, ../sass/base/_helpers.scss */
+.clearfix {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 47, ../sass/base/_helpers.scss */
+.clearer {
+  clear: both;
+}
+
+/*
+Text alignment
+
+#### .right-aligned
+Align **text** to right
+
+```html
+<p class="right-aligned">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, tempora.</p>
+```
+
+
+#### .left-aligned
+
+Align **text** to left. Use only if you need to reset/override text alignment.
+
+```html
+<p class="left-aligned">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, tempora.</p>
+```
+
+#### .center-aligned
+
+Align **text** to center.
+
+```html
+<p class="center-aligned">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, tempora.</p>
+```
+
+Styleguide 1.3
+ */
+/* line 80, ../sass/base/_helpers.scss */
+.right-aligned {
+  text-align: right;
+}
+
+/* line 85, ../sass/base/_helpers.scss */
+.left-aligned {
+  text-align: left;
+}
+
+/* line 90, ../sass/base/_helpers.scss */
+.center-aligned {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 300, ../sass/base/_helpers.scss */
+  .hidden-phone,
+  .visible-tablet,
+  .visible-desktop {
+    display: none !important;
+  }
+
+  /* line 305, ../sass/base/_helpers.scss */
+  .visible-phone,
+  .hidden-tablet,
+  .hidden-desktop {
+    display: inherit !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* line 313, ../sass/base/_helpers.scss */
+  .hidden-tablet,
+  .visible-phone,
+  .visible-desktop {
+    display: none !important;
+  }
+
+  /* line 318, ../sass/base/_helpers.scss */
+  .visible-tablet,
+  .hidden-phone,
+  .hidden-desktop {
+    display: inherit !important;
+  }
+}
+@media screen and (min-width: 984px) {
+  /* line 326, ../sass/base/_helpers.scss */
+  .visible-phone,
+  .visible-tablet,
+  .hidden-desktop {
+    display: none !important;
+  }
+
+  /* line 331, ../sass/base/_helpers.scss */
+  .visible-desktop,
+  .hidden-phone,
+  .hidden-tablet {
+    display: inherit !important;
+  }
+}
 /* line 1, ../sass/layout/_layout.scss */
 .container {
   margin: 0 auto;
@@ -67,54 +205,54 @@ li {
   max-width: 984px;
   padding: 20px;
 }
-@media screen and (min-width: 768px) {
-  /* line 1, ../sass/layout/_layout.scss */
-  .container {
-    width: 768px;
-  }
-}
-/* line 11, ../sass/layout/_layout.scss */
+/* line 7, ../sass/layout/_layout.scss */
 .nav .container {
   padding: 0;
 }
 
-/* line 28, ../sass/layout/_layout.scss */
+/* line 24, ../sass/layout/_layout.scss */
 .header .container {
   text-align: center;
   margin-top: -20px;
   margin-bottom: -50px;
 }
 
-/* line 37, ../sass/layout/_layout.scss */
+/* line 33, ../sass/layout/_layout.scss */
 .section.nav {
   padding-bottom: 0;
 }
-/* line 41, ../sass/layout/_layout.scss */
+/* line 37, ../sass/layout/_layout.scss */
 .section.red {
   background-color: #a7161b;
 }
-/* line 45, ../sass/layout/_layout.scss */
+/* line 41, ../sass/layout/_layout.scss */
 .section.grey {
   background-color: #5c5c56;
 }
-/* line 49, ../sass/layout/_layout.scss */
+/* line 45, ../sass/layout/_layout.scss */
 .section.white {
   background-color: white;
   color: black;
 }
-/* line 54, ../sass/layout/_layout.scss */
+/* line 50, ../sass/layout/_layout.scss */
 .section.black {
   background-color: black;
 }
 
-/* line 1, ../sass/modules/_nav.scss */
+/* line 8, ../sass/modules/_nav.scss */
 .nav__list__item {
   float: left;
 }
+@media screen and (max-width: 767px) {
+  /* line 8, ../sass/modules/_nav.scss */
+  .nav__list__item {
+    float: none;
+  }
+}
 
-/* line 6, ../sass/modules/_nav.scss */
+/* line 16, ../sass/modules/_nav.scss */
 .nav__anchor {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 300;
   text-align: center;
   display: block;
@@ -122,20 +260,30 @@ li {
   text-decoration: none;
   padding: 0 36px;
 }
-/* line 17, ../sass/modules/_nav.scss */
+/* line 27, ../sass/modules/_nav.scss */
 .nav__anchor:hover {
   background-color: black;
 }
 
-/* line 22, ../sass/modules/_nav.scss */
+/* line 32, ../sass/modules/_nav.scss */
+.nav__anchor--facebook {
+  background-color: #3b5998;
+}
+
+/* line 36, ../sass/modules/_nav.scss */
 .logo {
   float: right;
   width: 84px;
 }
-/* line 27, ../sass/modules/_nav.scss */
+/* line 41, ../sass/modules/_nav.scss */
 .logo .nav__anchor {
   font-size: 0;
   padding: 0;
+}
+
+/* line 47, ../sass/modules/_nav.scss */
+.nav__list-secondary {
+  float: right;
 }
 
 /* line 1, ../sass/modules/_maps-iframe.scss */
