@@ -13,8 +13,39 @@
 	}
 }
 
+.nav__header {
+	.nav__anchor {
+		position: relative;
+		padding-left: 50px;
+		text-align: left;	
+
+		&:hover {
+			background-color: $red;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: 10px;
+			top: 18px;
+			width: 1em;
+			height: 0.11em;
+			background: $white;
+			box-shadow: 
+				0 0.25em 0 0 $white,
+				0 0.5em 0 0 $white;
+		}
+	}
+	
+}
+
 .nav__anchor {
 	font-size: 2em;
+
+	@include mq-max($bp1) {
+		font-size: 1.75em;
+	}
+
 	font-weight: 300;
 	text-align: center;
 	display: block;

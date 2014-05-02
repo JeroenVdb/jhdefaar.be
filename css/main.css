@@ -250,7 +250,29 @@ Styleguide 1.3
   }
 }
 
-/* line 16, ../sass/modules/_nav.scss */
+/* line 17, ../sass/modules/_nav.scss */
+.nav__header .nav__anchor {
+  position: relative;
+  padding-left: 50px;
+  text-align: left;
+}
+/* line 22, ../sass/modules/_nav.scss */
+.nav__header .nav__anchor:hover {
+  background-color: #a7161b;
+}
+/* line 26, ../sass/modules/_nav.scss */
+.nav__header .nav__anchor:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 18px;
+  width: 1em;
+  height: 0.11em;
+  background: white;
+  box-shadow: 0 0.25em 0 0 white, 0 0.5em 0 0 white;
+}
+
+/* line 42, ../sass/modules/_nav.scss */
 .nav__anchor {
   font-size: 2em;
   font-weight: 300;
@@ -260,28 +282,34 @@ Styleguide 1.3
   text-decoration: none;
   padding: 0 36px;
 }
-/* line 27, ../sass/modules/_nav.scss */
+@media screen and (max-width: 767px) {
+  /* line 42, ../sass/modules/_nav.scss */
+  .nav__anchor {
+    font-size: 1.75em;
+  }
+}
+/* line 58, ../sass/modules/_nav.scss */
 .nav__anchor:hover {
   background-color: black;
 }
 
-/* line 32, ../sass/modules/_nav.scss */
+/* line 63, ../sass/modules/_nav.scss */
 .nav__anchor--facebook {
   background-color: #3b5998;
 }
 
-/* line 36, ../sass/modules/_nav.scss */
+/* line 67, ../sass/modules/_nav.scss */
 .logo {
   float: right;
   width: 84px;
 }
-/* line 41, ../sass/modules/_nav.scss */
+/* line 72, ../sass/modules/_nav.scss */
 .logo .nav__anchor {
   font-size: 0;
   padding: 0;
 }
 
-/* line 47, ../sass/modules/_nav.scss */
+/* line 78, ../sass/modules/_nav.scss */
 .nav__list-secondary {
   float: right;
 }

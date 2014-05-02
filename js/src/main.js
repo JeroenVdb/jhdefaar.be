@@ -9,7 +9,8 @@ App.toggleMenu = (function(){
 	var init = function() {
 
 		var toggleMenu = document.querySelectorAll('.js-toggle-menu')[0];
-		toggleMenu.addEventListener("click", function(){
+		toggleMenu.addEventListener("click", function(event){
+			event.preventDefault();
 			toggle(toggleMenu);
 		}, false);
 	}
