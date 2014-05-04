@@ -42,20 +42,24 @@ h2 {
   font-weight: 300;
   font-size: 2em;
 }
+/* line 29, ../sass/base/_base.scss */
+h2:first-letter {
+  text-transform: uppercase;
+}
 
-/* line 31, ../sass/base/_base.scss */
+/* line 34, ../sass/base/_base.scss */
 p {
   margin: 20px 0;
   line-height: 1.75em;
 }
 
-/* line 36, ../sass/base/_base.scss */
+/* line 39, ../sass/base/_base.scss */
 ul {
   margin: 0;
   padding: 0;
 }
 
-/* line 41, ../sass/base/_base.scss */
+/* line 44, ../sass/base/_base.scss */
 li {
   list-style-type: none;
 }
