@@ -294,7 +294,7 @@ Styleguide 1.3
 .nav__list__item {
   float: left;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 983px) {
   /* line 14, ../sass/modules/_nav.scss */
   .nav__list__item {
     float: none;

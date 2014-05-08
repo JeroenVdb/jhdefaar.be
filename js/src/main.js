@@ -27,7 +27,7 @@ App.toggleMenu = (function(){
 	function toggle(navigation) {
 		
 
-		if (navigation.className.indexOf('hidden-phone') > -1) {
+		if (navigation.className.indexOf('visible-desktop') > -1) {
 			show(navigation);
 		} else {
 			hide(navigation);
@@ -36,11 +36,11 @@ App.toggleMenu = (function(){
 	}
 
 	function show(navigation) {
-		navigation.className = navigation.className.replace('hidden-phone', '');
+		navigation.className = navigation.className.replace('visible-desktop', '');
 	}
 
 	function hide(navigation) {
-		navigation.className = navigation.className + ' hidden-phone';
+		navigation.className = navigation.className + ' visible-desktop';
 	}
 
 	return {

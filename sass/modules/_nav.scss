@@ -14,7 +14,7 @@
 .nav__list__item {
 	float:left;
 
-	@include mq-max($bp1) {
+	@include mq-max($bp2) {
 		float:none;
 	}
 }
