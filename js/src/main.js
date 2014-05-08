@@ -8,23 +8,39 @@ App.toggleMenu = (function(){
 
 	var init = function() {
 
-		var toggleMenu = document.querySelectorAll('.js-toggle-menu')[0];
+		var navigation = document.querySelectorAll('.nav__list-primary')[0],
+			toggleMenu = document.querySelectorAll('.js-toggle-menu')[0],
+			body = document.body;
+
 		toggleMenu.addEventListener("click", function(event){
 			event.preventDefault();
-			toggle(toggleMenu);
+			toggle(navigation);
+		}, false);
+
+		body.addEventListener("click", function(event){
+			if (event.target !== toggleMenu) {
+				hide(navigation);				
+			}
 		}, false);
 	}
 
-	function toggle(elem) {
+	function toggle(navigation) {
 		
-		var navigation = document.querySelectorAll('.nav__list-primary')[0];
 
 		if (navigation.className.indexOf('hidden-phone') > -1) {
-			navigation.className = navigation.className.replace('hidden-phone', '');
+			show(navigation);
 		} else {
-			navigation.className = navigation.className + ' hidden-phone';
+			hide(navigation);
 		}
 
+	}
+
+	function show(navigation) {
+		navigation.className = navigation.className.replace('hidden-phone', '');
+	}
+
+	function hide(navigation) {
+		navigation.className = navigation.className + ' hidden-phone';
 	}
 
 	return {
@@ -34,3 +50,7 @@ App.toggleMenu = (function(){
 });
 
 App();
+
+window.onload = function() {
+	smoothScroll.init();
+};
