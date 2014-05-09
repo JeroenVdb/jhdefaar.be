@@ -17,5 +17,8 @@
     "grunt-imageoptim": "*",
     "grunt-contrib-copy": "*",
     "grunt-bless": "*"
-  }
+  },
+  "scripts": {
+        "test": "grunt"
+    }
 }
