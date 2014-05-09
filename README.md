@@ -1,24 +1,7 @@
-new-static-project
+JHDeFaar.be
 ==================
 
-My default setup for a new static project.
-
-## Setup contains
-
-- Jekyll (1.2.1)
-- Grunt with configurated plugins:
-    - contrib-concat
-    - sass
-    - contrib-compass
-    - jekyll
-    - contrib-watch
-    - contrib-uglify
-    - contrib-jshint
-    - bg-shell
-    - imageoptim
-    - contrib-copy
-    - bless
-- Basic SMACSS folder structure
+Website Jeugdhuis De Faar.
 
 ## Run
 - Clone this repository
