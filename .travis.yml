@@ -6,3 +6,4 @@ install: npm install
 before_script:
 - 'gem install sass'
 - 'gem install compass'
+- 'gem install jekyll'
