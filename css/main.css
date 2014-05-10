@@ -84,6 +84,14 @@ li {
   list-style-type: none;
 }
 
+/* line 64, ../sass/base/_base.scss */
+iframe {
+  border: none;
+  border-width: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
 /*
 Helper classes
 
