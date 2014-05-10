@@ -39,12 +39,18 @@ App.toggleMenu = (function(){
 
 	function show() {
 		navigation.className = navigation.className.replace('visible-desktop', '');
+
+		if (toggleMenu.className.indexOf('is-active') === -1) {
+			toggleMenu.className = toggleMenu.className + ' is-active';
+		}
 	}
 
 	function hide() {
 		if (navigation.className.indexOf('visible-desktop') === -1) {
 			navigation.className = navigation.className + ' visible-desktop';
 		}
+
+		toggleMenu.className = toggleMenu.className.replace('is-active', '');
 	}
 
 	return {
