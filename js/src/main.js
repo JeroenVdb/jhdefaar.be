@@ -18,14 +18,15 @@ App.toggleMenu = (function(){
 		}, false);
 
 		body.addEventListener("click", function(event){
+			alert(event.target)
 			if (event.target !== toggleMenu) {
-				hide(navigation);				
+				hide(navigation);
 			}
 		}, false);
 	}
 
 	function toggle(navigation) {
-		
+
 
 		if (navigation.className.indexOf('visible-desktop') > -1) {
 			show(navigation);
@@ -46,7 +47,7 @@ App.toggleMenu = (function(){
 	return {
 		init:init
 	}
-	
+
 });
 
 App();
