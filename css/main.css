@@ -29,62 +29,63 @@ body {
   font-family: 'Open Sans', 'sans-serif';
   font-weight: 300;
   font-size: 16px;
+  margin-top: 44px;
 }
 
-/* line 16, ../sass/base/_base.scss */
+/* line 18, ../sass/base/_base.scss */
 a {
   color: white;
   text-decoration: none;
   border-bottom: 1px solid #999999;
   padding-bottom: 2px;
 }
-/* line 24, ../sass/base/_base.scss */
+/* line 26, ../sass/base/_base.scss */
 a:hover {
   border-bottom: 1px solid white;
 }
-/* line 28, ../sass/base/_base.scss */
+/* line 30, ../sass/base/_base.scss */
 .section.white a {
   color: black;
 }
-/* line 31, ../sass/base/_base.scss */
+/* line 33, ../sass/base/_base.scss */
 .section.white a:hover {
   border-bottom: 1px solid black;
 }
 
-/* line 37, ../sass/base/_base.scss */
+/* line 39, ../sass/base/_base.scss */
 h2 {
   font-weight: 300;
   font-size: 2em;
 }
-/* line 40, ../sass/base/_base.scss */
+/* line 42, ../sass/base/_base.scss */
 h2:first-letter {
   text-transform: uppercase;
 }
 
-/* line 45, ../sass/base/_base.scss */
+/* line 47, ../sass/base/_base.scss */
 h3 {
   font-weight: 600;
 }
 
-/* line 49, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 p {
   margin: 20px 0;
   line-height: 2em;
 }
 
-/* line 54, ../sass/base/_base.scss */
+/* line 56, ../sass/base/_base.scss */
 ul {
   margin: 0;
   padding: 0;
   line-height: 2em;
 }
 
-/* line 60, ../sass/base/_base.scss */
+/* line 62, ../sass/base/_base.scss */
 li {
   list-style-type: none;
 }
 
-/* line 64, ../sass/base/_base.scss */
+/* line 66, ../sass/base/_base.scss */
 iframe {
   border: none;
   border-width: 0;
@@ -257,21 +258,22 @@ Styleguide 1.3
 /* line 33, ../sass/layout/_layout.scss */
 .section.nav {
   padding-bottom: 0;
+  margin-top: -44px;
 }
-/* line 37, ../sass/layout/_layout.scss */
+/* line 38, ../sass/layout/_layout.scss */
 .section.red {
   background-color: #a7161b;
 }
-/* line 41, ../sass/layout/_layout.scss */
+/* line 42, ../sass/layout/_layout.scss */
 .section.grey {
   background-color: #5c5c56;
 }
-/* line 45, ../sass/layout/_layout.scss */
+/* line 46, ../sass/layout/_layout.scss */
 .section.white {
   background-color: white;
   color: black;
 }
-/* line 50, ../sass/layout/_layout.scss */
+/* line 51, ../sass/layout/_layout.scss */
 .section.black {
   background-color: black;
 }
@@ -324,7 +326,7 @@ Styleguide 1.3
   content: "";
   position: absolute;
   left: 10px;
-  top: 14px;
+  top: 17px;
   width: 1em;
   height: 0.11em;
   background: white;
@@ -338,7 +340,7 @@ Styleguide 1.3
   font-weight: 300;
   text-align: center;
   display: block;
-  line-height: 1.75em;
+  line-height: 2em;
   text-decoration: none;
   padding: 0 36px;
 }

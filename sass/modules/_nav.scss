@@ -23,7 +23,7 @@
 	.nav__anchor {
 		position: relative;
 		padding-left: 50px;
-		text-align: left;	
+		text-align: left;
 
 		&:hover {
 			background-color: $red;
@@ -33,16 +33,16 @@
 			content: "";
 			position: absolute;
 			left: 10px;
-			top: 14px;
+			top: 17px;
 			width: 1em;
 			height: 0.11em;
 			background: $white;
-			box-shadow: 
+			box-shadow:
 				0 0.25em 0 0 $white,
 				0 0.5em 0 0 $white;
 		}
 	}
-	
+
 }
 
 .nav__anchor {
@@ -53,7 +53,7 @@
 	font-weight: 300;
 	text-align: center;
 	display: block;
-	line-height: 1.75em;
+	line-height: 2em;
 
 	text-decoration: none;
 
@@ -72,7 +72,7 @@
 .logo {
 	float: right;
 	width: 39px;
-	
+
 
 	.nav__anchor {
 		font-size: 0;

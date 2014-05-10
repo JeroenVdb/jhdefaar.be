@@ -6,46 +6,50 @@ var App = (function(){
 
 App.toggleMenu = (function(){
 
-	var init = function() {
+	var navigation = document.querySelectorAll('.nav__list-primary')[0],
+		toggleMenu = document.querySelectorAll('.js-toggle-menu')[0],
+		body = document.querySelectorAll('.content')[0];
 
-		var navigation = document.querySelectorAll('.nav__list-primary')[0],
-			toggleMenu = document.querySelectorAll('.js-toggle-menu')[0],
-			body = document.body;
+	var init = function() {
 
 		toggleMenu.addEventListener("click", function(event){
 			event.preventDefault();
-			toggle(navigation);
+			toggle();
 		}, false);
 
 		body.addEventListener("click", function(event){
-			alert(event.target)
-			if (event.target !== toggleMenu) {
-				hide(navigation);
-			}
+			hide();
 		}, false);
+
+		body.addEventListener("touchstart", function(event){
+			hide();
+		}, false);
+
 	}
 
-	function toggle(navigation) {
-
+	function toggle() {
 
 		if (navigation.className.indexOf('visible-desktop') > -1) {
-			show(navigation);
+			show();
 		} else {
-			hide(navigation);
+			hide();
 		}
 
 	}
 
-	function show(navigation) {
+	function show() {
 		navigation.className = navigation.className.replace('visible-desktop', '');
 	}
 
-	function hide(navigation) {
-		navigation.className = navigation.className + ' visible-desktop';
+	function hide() {
+		if (navigation.className.indexOf('visible-desktop') === -1) {
+			navigation.className = navigation.className + ' visible-desktop';
+		}
 	}
 
 	return {
-		init:init
+		init:init,
+		hide:hide
 	}
 
 });
@@ -53,5 +57,9 @@ App.toggleMenu = (function(){
 App();
 
 window.onload = function() {
-	smoothScroll.init();
+	smoothScroll.init({
+		callbackBefore: function ( toggle, anchor ) {
+			App.toggleMenu().hide();
+		}
+	});
 };
