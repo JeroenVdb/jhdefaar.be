@@ -1,7 +1,11 @@
 'use strict';
 
 var App = (function(){
-	App.toggleMenu().init();
+
+	if (typeof(window.addEventListener) !== 'undefined') {
+		App.toggleMenu().init();
+	}
+
 });
 
 App.toggleMenu = (function(){

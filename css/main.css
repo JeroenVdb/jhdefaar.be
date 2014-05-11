@@ -26,7 +26,7 @@ body {
   padding: 0px;
   color: white;
   background-color: black;
-  font-family: 'Open Sans', 'sans-serif';
+  font-family: 'Open Sans', Arial;
   font-weight: 300;
   font-size: 16px;
   margin-top: 44px;
@@ -51,41 +51,45 @@ a:hover {
 .section.white a:hover {
   border-bottom: 1px solid black;
 }
+/* line 38, ../sass/base/_base.scss */
+a img {
+  border: none;
+}
 
-/* line 39, ../sass/base/_base.scss */
+/* line 43, ../sass/base/_base.scss */
 h2 {
   font-weight: 300;
   font-size: 2em;
 }
-/* line 42, ../sass/base/_base.scss */
+/* line 46, ../sass/base/_base.scss */
 h2:first-letter {
   text-transform: uppercase;
 }
 
-/* line 47, ../sass/base/_base.scss */
+/* line 51, ../sass/base/_base.scss */
 h3 {
   font-weight: 600;
 }
 
-/* line 51, ../sass/base/_base.scss */
+/* line 55, ../sass/base/_base.scss */
 p {
   margin: 20px 0;
   line-height: 2em;
 }
 
-/* line 56, ../sass/base/_base.scss */
+/* line 60, ../sass/base/_base.scss */
 ul {
   margin: 0;
   padding: 0;
   line-height: 2em;
 }
 
-/* line 62, ../sass/base/_base.scss */
+/* line 66, ../sass/base/_base.scss */
 li {
   list-style-type: none;
 }
 
-/* line 66, ../sass/base/_base.scss */
+/* line 70, ../sass/base/_base.scss */
 iframe {
   border: none;
   border-width: 0;
@@ -308,7 +312,7 @@ Styleguide 1.3
   border-right: 1px solid #8b1216;
 }
 /* line 23, ../sass/modules/_nav.scss */
-.nav__list__item.last {
+.nav__list__item.last, .nav__list__item.logo {
   border-right: none;
 }
 @media screen and (max-width: 983px) {
@@ -355,7 +359,7 @@ Styleguide 1.3
   display: block;
   line-height: 2em;
   text-decoration: none;
-  padding: 0 35px;
+  padding: 0 33px;
 }
 /* line 78, ../sass/modules/_nav.scss */
 .nav__anchor:hover {
