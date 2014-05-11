@@ -64,6 +64,29 @@ App.toggleMenu = (function(){
 
 });
 
+App.maps = function(){
+
+	var mapOptions = {
+		zoom: 15,
+		center: new google.maps.LatLng(50.874300, 4.005431),
+		scrollwheel: false
+	};
+
+	var map = new google.maps.Map(document.getElementById('map-canvas'),
+	    mapOptions);
+
+
+	var image = 'img/marker.png';
+	var myLatLng = new google.maps.LatLng(50.874300, 4.005431);
+	var beachMarker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		icon: image
+	});
+
+
+};
+
 App();
 
 window.onload = function() {
@@ -72,4 +95,13 @@ window.onload = function() {
 			App.toggleMenu().hide();
 		}
 	});
+
+	var script = document.createElement('script');
+	script.type = 'text/javascript';
+	script.src = 'https://maps.googleapis.com/maps/api/js?api=AIzaSyDVyXYHV7GJSofxZyB27VvyG7VmUVrd9gE&sensor=false&callback=App.maps';
+	document.body.appendChild(script);
 };
+
+function initialize() {
+
+}

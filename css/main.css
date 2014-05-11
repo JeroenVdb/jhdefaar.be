@@ -394,6 +394,12 @@ Styleguide 1.3
   margin-bottom: -25px;
 }
 
+/* line 6, ../sass/modules/_maps-iframe.scss */
+#map-canvas {
+  height: 300px;
+  width: 100%;
+}
+
 /* line 5, ../sass/modules/_modules.scss */
 .pricings {
   clear: both;
