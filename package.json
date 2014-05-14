@@ -19,6 +19,6 @@
     "grunt-bless": "*"
   },
   "scripts": {
-        "test": "grunt"
+        "test": "grunt test"
     }
 }
