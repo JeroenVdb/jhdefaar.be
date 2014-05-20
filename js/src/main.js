@@ -101,7 +101,3 @@ window.onload = function() {
 	script.src = 'https://maps.googleapis.com/maps/api/js?api=AIzaSyDVyXYHV7GJSofxZyB27VvyG7VmUVrd9gE&sensor=false&callback=App.maps';
 	document.body.appendChild(script);
 };
-
-function initialize() {
-
-}
