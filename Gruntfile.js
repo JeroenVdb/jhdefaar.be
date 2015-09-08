@@ -96,6 +96,13 @@ module.exports = function(grunt) {
 					src: '.'
 					// excludes are configured in _config.yml
 				}
+			},
+			build: {
+				options: {
+					dest: './_site',
+					src: '.'
+					// excludes are configured in _config.yml
+				}
 			}
 		},
 		bgShell: {
@@ -175,8 +182,8 @@ module.exports = function(grunt) {
 		'watch'
 	]);
 
-	grunt.registerTask('test', [
-		'bgShell:jekyll',
+	grunt.registerTask('build', [
+		'jekyll:build',
 		// js specific tasks
 		'concat:dist',
 		'uglify:build',
