@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 				dest: '<%= path.jsDist %>/main.js'
 			}
 		},
-	
+
 		/**
 		* Uglify: Minify files with UglifyJS
 		*/
@@ -55,7 +55,7 @@ module.exports = function(grunt) {
 				dest: '<%= path.jsDist %>/main.min.js'
 			}
 		},
-		
+
 		/*
 		** Default SASS Config
 		*/
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
 		'concat:dist',
 		'uglify:build',
 		// sass specific tasks
-		'compass:dev',
+		'sass:dist',
 		// watch
 		'watch'
 	]);
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
 		'concat:dist',
 		'uglify:build',
 		// sass specific tasks
-		'compass:dev'
+		'sass:dist'
 	]);
 
 };
