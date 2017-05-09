@@ -6,7 +6,11 @@
   "author": "Jeroen Van den Berghe",
   "devDependencies": {
     "http-server": "^0.10.0",
-    "node-sass": "^4.5.2"
+    "node-sass": "^4.5.2",
+    "uglify": "^0.1.5"
+  },
+  "engines": {
+    "node": "4.1.1"
   },
   "scripts": {
     "build:all": "npm run build:html & npm run build:css & npm run build:download & npm run build:js & npm run build:img",
