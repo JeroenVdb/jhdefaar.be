@@ -1,10 +1,2 @@
-# Grunt and Jekyll
-_site/
-css/
-csssrc/
-js/dist/
+dest/
 node_modules/
-.sass-cache
-
-# Sulbime Text
-*.sublime-workspace
