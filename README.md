@@ -5,9 +5,11 @@ Website Jeugdhuis De Faar.
 
 ## Development
 
-Pull Requests of fellow De Faar members welcome!
+Pull Requests your changes!
 
 #### Run local
+
+You will need `node@4.1.1`.
 
 - Clone this repository
 - cd to the folder

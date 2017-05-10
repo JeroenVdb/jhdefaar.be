@@ -12,6 +12,10 @@
   "engines": {
     "node": "4.1.1"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/JeroenVdb/jhdefaar.be.git"
+  },
   "scripts": {
     "build:all": "npm run build:html & npm run build:css & npm run build:download & npm run build:js & npm run build:img",
     "build:html": "cp ./src/html/** ./dest/",
@@ -20,5 +24,6 @@
     "build:download": "mkdir -p ./dest/download/ && cp ./src/download/** ./dest/download/",
     "build:js": "mkdir -p ./dest/js/ && uglify --source ./src/js/main.js,./src/js/smooth-scroll.js --output ./dest/js/main.min.js",
     "start": "npm run build:all && http-server ./dest/ -o -p 8080"
-  }
+  },
+  "license": "MIT"
 }
