@@ -7,12 +7,7 @@ Description: >-
   an Amazon Route 53 DNS record, an S3 bucket and a CloudFront distribution. You
   will be billed for the AWS resources used if you create a stack from this
   template.
-Parameters:
-  HostedZone:
-    Type: String
-    Description: The DNS name of an existing Amazon Route 53 hosted zone
-    AllowedPattern: '(?!-)[a-zA-Z0-9-.]{1,63}(?<!-)'
-    ConstraintDescription: must be a valid DNS zone name.
+
 Mappings:
   Region2S3WebsiteSuffix:
     us-east-1:
@@ -106,7 +101,7 @@ Resources:
   WebsiteDNSName:
     Type: 'AWS::Route53::RecordSet'
     Properties:
-      HostedZoneName: !Sub '{HostedZoneDNS}.'
+      HostedZoneId: !Ref 'HostedZoneDNS'
       Comment: CNAME redirect custom name to CloudFront distribution
       Name: !Join
         - ''
