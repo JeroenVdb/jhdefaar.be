@@ -58,14 +58,7 @@ Resources:
       DistributionConfig:
         Comment: CDN for S3-backed website
         Aliases:
-          - !Join
-            - ''
-            - - !Ref 'AWS::StackName'
-              - !Ref 'AWS::AccountId'
-              - .
-              - !Ref 'AWS::Region'
-              - .
-              - 'jhdefaar.be'
+          - 'www.jhdefaar.be'
         Enabled: 'true'
         DefaultCacheBehavior:
           ForwardedValues:
