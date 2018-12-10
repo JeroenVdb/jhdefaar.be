@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build:all": "npm run build:html && npm run build:css && npm run build:download && npm run build:js && npm run build:img",
-    "build:html": "cp ./src/html/** ./dest/",
+    "build:html": "mkdir -p ./dest && cp ./src/html/** ./dest/",
     "build:img": "mkdir -p ./dest/img && cp ./src/img/** ./dest/img/",
     "build:css": "mkdir -p ./dest/css && node-sass ./src/scss/ --output ./dest/css/ --output-style compressed",
     "build:download": "mkdir -p ./dest/download/ && cp ./src/download/** ./dest/download/",
