@@ -1,19 +1,28 @@
-name: CI
+name: Deploy
 
 on: [push]
+  branches:
+    - master
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-    
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js 12
       uses: actions/setup-node@v1
       with:
-        version: 12.10.0
+        node-version: 12.10.0
     - name: npm install and build website
       run: |
         npm install
         npm run build:all
+    - uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --follow-symlinks --delete
+      env:
+        SOURCE_DIR: './dist'
+        AWS_REGION: 'eu-west-1'
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
