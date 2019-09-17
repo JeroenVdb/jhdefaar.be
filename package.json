@@ -5,11 +5,8 @@
   "url": "http://www.jhdefaar.be",
   "author": "Jeroen Van den Berghe",
   "devDependencies": {
-    "http-server": "^0.10.0",
-    "node-sass": "^4.5.2"
-  },
-  "engines": {
-    "node": "4.1.1"
+    "http-server": "^0.11.1",
+    "node-sass": "^4.12.0"
   },
   "repository": {
     "type": "git",
